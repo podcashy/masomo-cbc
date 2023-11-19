@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.imgur.com/mwpTHJj.png" sizes="192x192">
+    <title>Your Website</title>
+    <script>
+        function addToHomeScreen() {
+            if (window.navigator.standalone || document.referrer.indexOf('android-app://') === 0) {
+                // The app is already installed or running in standalone mode
+                return;
+            }
+            
+            // Prompt the user to add to home screen
+            alert("To add this website to your home screen, click the share icon and select 'Add to Home Screen'.");
+        }
+    </script>
+</head>
+<body onload="addToHomeScreen()">
+    <p>This is your website content.</p>
+</body>
+</html>
